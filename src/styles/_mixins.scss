@@ -1,0 +1,19 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin button($bg-color) {
+    padding: $spacing-sm $spacing-md;
+    background-color: $bg-color;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  
+    &:hover {
+      opacity: 0.9;
+    }
+  }

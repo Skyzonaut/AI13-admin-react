@@ -1,0 +1,26 @@
+.questionnaire-list {
+  background-color: white;
+  padding: 2vh 2vw 2vh 2vw;
+}
+.questionnaire-list button {
+  height: 1vh;
+}
+
+.container {
+  background-color: white;
+  padding: 2vh 2vw 2vh 2vw;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.quest-row {
+  margin-bottom: 1vh;
+}
+.quest-row input {
+  width: 100%;
+  text-align: left;
+}
+
+button.btn {
+  font-size: small;
+}/*# sourceMappingURL=Questionnaire.css.map */

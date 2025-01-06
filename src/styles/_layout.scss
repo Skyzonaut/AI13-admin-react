@@ -1,0 +1,63 @@
+.layout {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 15%;
+    background-color: $primary-color;
+    color: white;
+    padding: $spacing-md;
+  
+    &-header {
+      margin-bottom: $spacing-lg;
+      
+      h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+  
+    &-nav {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+    }
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    border-left: solid white 2px;
+    margin-bottom: 3vh;
+
+    a {
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
+        text-decoration: none;
+        width: 100%;
+        padding: $spacing-sm;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+}
+  
+  
+button.logout-btn {
+    margin-top: auto;
+    // color: $danger-color;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.main-content {
+    flex: 1;
+    height: 100%;
+    padding: $spacing-lg;
+    background-color: $background-color;
+  }

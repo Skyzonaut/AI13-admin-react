@@ -1,0 +1,87 @@
+.form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: $spacing-lg;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    &-row {
+      display: flex;
+      gap: $spacing-md;
+      margin-bottom: $spacing-md;
+    }
+  
+    &-group {
+      margin-bottom: $spacing-md;
+      flex: 1;
+  
+      label {
+        display: block;
+        margin-bottom: $spacing-sm;
+        font-weight: bold;
+      }
+  
+      input, select {
+        width: 100%;
+        padding: $spacing-sm;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+  
+        &:focus {
+          border-color: $primary-color;
+          outline: none;
+        }
+      }
+  
+      &.checkbox {
+        display: flex;
+        align-items: center;
+        
+        input {
+          width: auto;
+          margin-right: $spacing-sm;
+        }
+      }
+    }
+  
+    &-actions {
+      display: flex;
+      gap: $spacing-md;
+      justify-content: flex-end;
+      margin-top: $spacing-lg;
+    }
+  }
+  
+  .questions-section {
+    margin-top: $spacing-lg;
+    
+    .question-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: $spacing-sm;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      margin-bottom: $spacing-sm;
+    }
+  
+    .add-question-form {
+      margin-top: $spacing-md;
+      padding: $spacing-md;
+      border: 1px dashed #ddd;
+      border-radius: 4px;
+    }
+  }
+  
+  .btn-primary {
+    @include button($primary-color);
+  }
+  
+  .btn-secondary {
+    @include button(#6c757d);
+  }
+  
+  .btn-danger {
+    @include button($danger-color);
+  }

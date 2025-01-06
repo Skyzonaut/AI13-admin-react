@@ -1,0 +1,28 @@
+.questionnaire-list {
+    background-color: white;
+    padding: 2vh 2vw 2vh 2vw;
+
+    button {
+        height: 1vh;
+    }
+}
+
+.container {
+    background-color: white;
+    padding: 2vh 2vw 2vh 2vw;
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.quest-row {
+    margin-bottom:1vh;
+
+    input {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+button.btn {
+    font-size: small;
+}

@@ -1,0 +1,84 @@
+
+@import 'bootstrap/scss/bootstrap';
+@import 'variables';
+@import 'mixins';
+@import 'forms';
+@import 'layout';
+@import 'variables';
+@import 'header';
+@import 'dashboard';
+@import 'Login';
+@import 'User';
+@import 'Questionnaire';
+// Reset de base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  // padding:5vh 5vw 5vh 5vw;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+button {
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-md;
+}
+
+// Reset de base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.container {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: $spacing-md;
+}
+
+// Classes utilitaires communes
+.btn {
+  @include button($primary-color);
+  
+  &.btn-danger {
+    @include button($danger-color);
+  }
+  
+  &.btn-success {
+    @include button($secondary-color);
+  }
+}
+
+.form-group {
+  margin-bottom: $spacing-md;
+  
+  label {
+    display: block;
+    margin-bottom: $spacing-sm;
+  }
+  
+  input {
+    width: 100%;
+    padding: $spacing-sm;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+}
