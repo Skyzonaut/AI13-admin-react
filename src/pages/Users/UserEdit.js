@@ -94,7 +94,7 @@ const UserEdit = () => {
       setShowPasswordFields(false);
       setPasswordData({ password: '', passwordConfirm: '' });
       setPasswordError('');
-      // Optionnel : afficher un message de succès
+      
     } catch (err) {
       setPasswordError('Erreur lors de la mise à jour du mot de passe');
     }
