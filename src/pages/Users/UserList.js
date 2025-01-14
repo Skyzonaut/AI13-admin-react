@@ -82,8 +82,8 @@ const UserList = () => {
                   Modifier
                 </NavLink>
                 {user.isActive 
-                  ? <a onClick={() => desactivate(user.id)} style={{height:"3.3vh",verticalAlign:"middle",paddingTop:'4px'}} className='ms-3 btn btn-danger btn-sm'>Désactiver</a>
-                  : <a onClick={() => activate(user.id)} style={{height:"3.3vh",verticalAlign:"middle",paddingTop:'4px'}} className='ms-3 btn btn-warning btn-sm'>Activer</a>
+                  ? <a onClick={() => desactivate(user.id)} style={{height:"4.5vh",verticalAlign:"middle",paddingTop:'4px'}} className='ms-3 btn btn-danger btn-sm'>Désactiver</a>
+                  : <a onClick={() => activate(user.id)} style={{height:"4.5vh",verticalAlign:"middle",paddingTop:'4px'}} className='ms-3 btn btn-warning btn-sm'>Activer</a>
                 }
               </td>
             </tr>

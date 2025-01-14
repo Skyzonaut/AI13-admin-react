@@ -62,7 +62,12 @@ const QuestionnaireList = () => {
                   <Link to={`/questionnaires/edit/${questionnaire.id}`} className="btn btn-warning btn-sm">
                     Modifier
                   </Link>
-                  <a onClick={() => deleteQuestionnaire(questionnaire.id)} style={{height:"3.3vh",verticalAlign:"middle",paddingTop:'4px'}} className='ms-3 btn btn-danger btn-sm'>Supprimer</a>
+                  <a 
+                    onClick={() => deleteQuestionnaire(questionnaire.id)} 
+                    style={{height:"4.5vh",verticalAlign:"middle",paddingTop:'4px'}} 
+                    className='ms-3 btn btn-danger btn-sm'>
+                    Supprimer
+                  </a>
                 </td>
                 <td>{questionnaire.enabled ? "Activé" : "Désactivé"}</td>
               </tr>

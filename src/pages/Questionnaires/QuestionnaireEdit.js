@@ -121,16 +121,35 @@ const QuestionnaireEdit = () => {
   return (
     <div className="container mt-4">
       <h1 className="d-flex justify-content-between align-items-center">
-        {questionnaire.titre}
+        <div className="d-flex align-items-center">
+          {questionnaire.titre}
+        </div>
         <button
-        onClick={save}
+          onClick={save}
           className="btn btn-warning ms-auto"
           style={{ marginRight: '2px' }}
         >
           Enregistrer
         </button>
       </h1>
-
+      <div className="form-check form-switch">
+        <input
+          className="form-check-input"
+          type="checkbox"
+          id="questionnaireEnabled"
+          checked={questionnaire.enabled}
+          onChange={(e) => setQuestionnaire({
+            ...questionnaire,
+            enabled: e.target.checked
+          })}
+        />
+        <label 
+          className="form-check-label" 
+          htmlFor="questionnaireEnabled"
+        >
+          {questionnaire.enabled ? 'Activé' : 'Désactivé'}
+        </label>
+      </div>
       <table className='table table-striped'>
         <thead>
           <tr>

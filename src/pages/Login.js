@@ -23,27 +23,52 @@ const Login = () => {
     
   };
 
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Empêche le comportement par défaut du navigateur
+      handleSubmit(e); // Appelle la fonction de soumission
+    }
+  };
+
   return (
     <div className="login-page">
-        <h2>Connexion</h2>
-        <div className="form-group">
-          <label>Pseudo</label>
-          <input
-            type="text"
-            value={credentials.pseudo}
-            onChange={(e) => setCredentials({...credentials, pseudo: e.target.value})}
-          />
-        </div>
-        <div className="form-group">
-          <label>Mot de passe</label>
-          <input
-            type="password"
-            value={credentials.password}
-            onChange={(e) => setCredentials({...credentials, password: e.target.value})}
-          />
-        </div>
-        <h5 className="display-15" style={{color:"red"}}><i>{error}</i></h5>
-        <button type="submit" onClick={handleSubmit}>Se connecter</button>
+        <h1>Portail Administrateur</h1>
+        <h4>Connexion</h4>
+        <form>
+          <div className="form-group">
+            <label>Pseudo</label>
+            <input
+              data-bs-theme="dark" 
+              className="form-control"
+              type="text"
+              value={credentials.pseudo}
+              style={{borderWidth:"1px",borderColor:"grey"}}
+              onChange={(e) => setCredentials({...credentials, pseudo: e.target.value})}
+              onKeyDown={handleKeyDown}
+            />
+          </div>
+          <div className="form-group">
+            <label>Mot de passe</label>
+            <input
+              data-bs-theme="dark" 
+              type="password"
+              className="form-control"
+              value={credentials.password}
+              style={{borderWidth:"1px",borderColor:"grey"}}
+              onChange={(e) => setCredentials({...credentials, password: e.target.value})}
+              onKeyDown={handleKeyDown}
+            />
+          </div>
+          <h5 className="display-15" style={{color:"red"}}><i>{error}</i></h5>
+          
+          <inputButton 
+              data-bs-theme="dark" 
+              className="form-control"
+              style={{width: '6vw', textAlign:"center"}}
+              onClick={handleSubmit}>Login
+          </inputButton>
+        </form>
     </div>
   );
 };

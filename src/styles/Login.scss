@@ -1,4 +1,21 @@
+$txt-color: rgb(185, 185, 185);
 
 .login-page {
-    padding: 5vh 5vw 5vh 5vw;
+    height: 100vh;
+    padding: 10% 20% 0% 20%;
+    background-color: rgb(30, 30, 48);
+
+    label {
+        color: grey;
+    }
+
+    h4 {
+        color: $txt-color;
+    }
+
+    
+    h1 {
+        color: $txt-color;
+        margin-bottom: 2vh;
+    }
 }
